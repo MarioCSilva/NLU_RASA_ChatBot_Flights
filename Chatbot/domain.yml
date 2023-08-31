@@ -1,0 +1,161 @@
+version: "3.0"
+actions:
+  - utter_no_problem
+  - utter_bye
+  - utter_greet
+  - utter_how_you_doing
+  - utter_im_great
+  - utter_negative
+  - utter_positive
+  - utter_ask_search_from
+  - utter_ask_budget
+  - utter_ask_search_to
+  - utter_ack_search_from_and_to
+  - utter_search_flight_all
+  - utter_display_menu
+  - utter_check_booking
+  - utter_ask_for_feedback
+  - utter_thank_you
+  - utter_send_feedback_question
+entities:
+  - search_to_story
+  - search_from_story
+  - budget_story
+  - feedback_story
+slots:
+  search_to_story:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: search_to_story
+        intent: search_flight_all_story
+        not_intent:
+          chitchat
+          show_my_bookings
+          book_flight
+          search_flights
+  budget_story:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: budget_story
+        intent: search_flight_all_story
+        not_intent:
+          chitchat
+          search_flights
+          show_my_bookings
+          book_flight
+  search_from_story:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: search_from_story
+        intent: search_flight_all_story
+        not_intent:
+          chitchat
+          search_flights
+          show_my_bookings
+          book_flight
+  budget:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_text
+        conditions:
+        - active_loop: form_search_flights
+          requested_slot: budget
+  search_to:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_text
+        conditions:
+        - active_loop: form_search_flights
+          requested_slot: search_to
+  search_from:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_text
+        conditions:
+        - active_loop: form_search_flights
+          requested_slot: search_from
+forms:
+  form_search_flights:
+    required_slots:
+    - search_from
+    - search_to
+    - budget
+intents:
+  - search_flights
+  - give_search_from
+  - give_search_to
+  - search_flight_all_story:
+      use_entities:
+        - search_from_story
+        - search_to_story
+  - book_flight
+  - show_my_bookings
+  - basics.yes
+  - basics.no
+  - chitchat.thank_you
+  - chitchat.i_am_excited
+  - chitchat.i_need_help
+  - chitchat.bye
+  - chitchat.greet
+  - chitchat.how_are_you
+  - chitchat.i_am_angry
+  - chitchat.i_am_good
+  - chitchat.i_am_happy
+  - chitchat.i_am_sad
+responses:
+  utter_no_problem:
+    - custom: { text: "No Problem!", msg_type: "text" }
+  utter_bye:
+    - custom: { text: Bye, msg_type: "text" }
+    - custom: { text: See you later!, msg_type: "text" }
+  utter_greet:
+    - custom: { text: "Hello!", msg_type: "text" }
+  utter_how_you_doing:
+    - custom: { text: "How are you doing?", msg_type: "text" }
+  utter_im_great:
+    - custom: { text: "I am good! Thanks!", msg_type: "text" }
+    - custom: { text: "I am feeling great today!", msg_type: "text" }
+    - custom: { text: "I am a bot. Thanks for reminding me!", msg_type: "text" }
+  utter_negative:
+    - custom: { text: "Oh no! Sorry to hear that.", msg_type: "text" }
+    - custom: { text: "I'm sorry to hear that.", msg_type: "text" }
+    - custom: { text: Sad to hear that., msg_type: "text" }
+    - custom: { text: "Hope you feel better soon!", msg_type: "text" }
+  utter_positive:
+    - custom: { text: "Awesome!", msg_type: "text" }
+    - custom: { text: "Glad to hear that!", msg_type: "text" }
+    - custom: { text: "Great!", msg_type: "text" }
+  utter_ask_search_from:
+    - custom: { text: "Before doing a search I need to know your location or the city of departure.", msg_type: "location" }
+  utter_ask_budget:
+    - custom: { text: "What is your budget?", msg_type: "text" }
+  utter_ask_search_to:
+    - custom: { text: "What is the city of destination?", msg_type: "text" }
+  utter_ack_search_from_and_to:
+    - custom: { city_departure: "{search_from}", city_arrival: "{search_to}", budget: "{budget}" , msg_type: "search" }
+  utter_search_flight_all:
+    - custom: { text: "", city_departure: "{search_from_story}", city_arrival: "{search_to_story}", budget: "{budget_story}" , msg_type: "search" }
+  utter_display_menu:
+    - custom: { text: "[Show me flights", "Book a flight", "View my bookings", "Connect me to an agent]", msg_type: "buttons" }
+  utter_check_booking:
+    - custom: { text: "Looking for your booked flights.", msg_type: "checkbooking" }
+  utter_ask_for_feedback:
+    - custom: { text: "But wait! Could you please provide feedback about my assistance?", msg_type: "text" }
+  utter_thank_you:
+    - custom: { text: "Thank you!", msg_type: "text" }
+  utter_send_feedback_question:
+    - custom: { text: "", msg_type: "feedback" }
+
+  
+session_config:
+  session_expiration_time: 60  # value in minutes, 0 means infinitely long
+  carry_over_slots_to_new_session: true

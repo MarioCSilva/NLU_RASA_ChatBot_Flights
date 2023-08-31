@@ -1,0 +1,53 @@
+version: "3.0"
+stories:
+  - story: Greet_Positive
+    steps:
+      - intent: chitchat.greet
+      - action: utter_how_you_doing
+      - or:
+        - intent: chitchat.i_am_good
+        - intent: chitchat.i_am_happy
+        - intent: chitchat.i_am_excited
+      - action: utter_positive
+  - story: Greet_Negative
+    steps:
+      - intent: chitchat.greet
+      - action: utter_how_you_doing
+      - or:
+        - intent: chitchat.i_am_sad
+        - intent: chitchat.i_am_angry
+      - action: utter_negative
+  - story: Greet_And_Ask
+    steps:
+      - intent: chitchat.greet
+      - action: utter_how_you_doing
+      - intent: chitchat.how_are_you
+      - action: utter_im_great
+  - story: Respond to Thank you
+    steps:
+      - intent: chitchat.thank_you
+      - action: utter_no_problem
+  - story: Farewell
+    steps:
+      - intent: chitchat.bye
+      - action: utter_ask_for_feedback
+      - intent: basics.yes
+      - action: utter_send_feedback_question
+  - story: Farewell_and_no_feed
+    steps:
+      - intent: chitchat.bye
+      - action: utter_ask_for_feedback
+      - intent: basics.no
+      - action: utter_no_problem
+  - story: display buttons menu
+    steps:
+      - intent: chitchat.i_need_help
+      - action: utter_display_menu
+  - story: Search_Flight_All
+    steps:
+      - intent: search_flight_all_story
+      - action: utter_search_flight_all
+  - story: Show_My_Bookings
+    steps:
+      - intent: show_my_bookings
+      - action: utter_check_booking

@@ -1,0 +1,752 @@
+version: "3.0"
+nlu:
+- intent: basics.no
+  metadata:
+    language: en
+  examples:
+  - text: |
+      nah
+  - text: |
+      never mind
+  - text: |
+      no
+  - text: |
+      no thanks
+    metadata:
+      canonical: true
+  - text: |
+      nope
+  - text: |
+      not really
+  - text: |
+      please no
+- intent: basics.time
+  metadata:
+    language: en
+  examples:
+  - text: |
+      10 min ago
+    metadata:
+      canonical: true
+  - text: |
+      2 days ago
+  - text: |
+      Easter
+  - text: |
+      In a minute
+  - text: |
+      Monday
+  - text: |
+      a month ago
+  - text: |
+      between May and August
+  - text: |
+      for Christmas
+  - text: |
+      in 15 minutes
+  - text: |
+      in 2 hours
+  - text: |
+      in August
+  - text: |
+      in about 2 weeks
+  - text: |
+      in about an hour
+  - text: |
+      in one month
+  - text: |
+      just now
+  - text: |
+      now
+  - text: |
+      on Wednesday
+  - text: |
+      the day after tomorrow
+  - text: |
+      today
+  - text: |
+      tomorrow
+  - text: |
+      yesterday
+- intent: basics.yes
+  metadata:
+    language: en
+  examples:
+  - text: |
+      I do
+  - text: |
+      absolutely
+  - text: |
+      alright
+  - text: |
+      of course
+  - text: |
+      ok
+  - text: |
+      ok then
+  - text: |
+      ok, let's do it
+    metadata:
+      canonical: true
+  - text: |
+      sure
+  - text: |
+      yeah sure
+  - text: |
+      yep
+  - text: |
+      yes
+  - text: |
+      yes, please
+- intent: chitchat.bye
+  metadata:
+    language: en
+  examples:
+  - text: |
+      I must go
+  - text: |
+      I said bye
+  - text: |
+      alright bye
+  - text: |
+      bye
+  - text: |
+      bye bye good night
+  - text: |
+      bye bye see you
+  - text: |
+      bye bye see you soon
+  - text: |
+      bye bye take care
+  - text: |
+      bye for now
+  - text: |
+      bye-bye
+  - text: |
+      get lost
+  - text: |
+      go to bed
+  - text: |
+      good bye
+  - text: |
+      goodbye
+  - text: |
+      goodbye for now
+  - text: |
+      goodbye see you later
+  - text: |
+      hope to see you later
+  - text: |
+      leave me alone
+  - text: |
+      never mind bye
+  - text: |
+      now bye
+  - text: |
+      ok bye
+  - text: |
+      okay bye
+  - text: |
+      okay see you later
+    metadata:
+      canonical: true
+  - text: |
+      okay thank you bye
+  - text: |
+      see ya
+  - text: |
+      see you
+  - text: |
+      see you soon
+  - text: |
+      see you tomorrow
+  - text: |
+      talk to you later
+  - text: |
+      thanks bye bye
+  - text: |
+      that's all goodbye
+  - text: |
+      that's it goodbye
+  - text: |
+      till next time
+  - text: |
+      you can go now
+- intent: chitchat.greet
+  metadata:
+    language: en
+  examples:
+  - text: |
+      I greet you
+  - text: |
+      a good day
+  - text: |
+      a good morning
+  - text: |
+      afternoon
+  - text: |
+      and a good morning to you
+  - text: |
+      evening
+  - text: |
+      good evening
+    metadata:
+      canonical: true
+  - text: |
+      good evening there
+  - text: |
+      good evening to you
+  - text: |
+      good morning
+  - text: |
+      good morning there
+  - text: |
+      good morning to you
+  - text: |
+      good morning too
+  - text: |
+      greetings
+  - text: |
+      have a great morning
+  - text: |
+      have a nice morning
+  - text: |
+      hello
+  - text: |
+      hello again
+  - text: |
+      hello good evening
+  - text: |
+      hello good morning
+  - text: |
+      hello hi
+  - text: |
+      hello there
+  - text: |
+      hey
+  - text: |
+      hey good evening
+  - text: |
+      hey there
+  - text: |
+      heya
+  - text: |
+      hi
+  - text: |
+      hi good morning
+  - text: |
+      hi there
+  - text: |
+      howdy
+  - text: |
+      just going to say hi
+  - text: |
+      long time no see
+  - text: |
+      lovely day isn't it
+  - text: |
+      morning
+  - text: |
+      top of the morning to you
+- intent: chitchat.how_are_you
+  metadata:
+    language: en
+  examples:
+  - text: |
+      I'm great and you
+  - text: |
+      I am great and you
+  - text: |
+      I'm fine and you
+  - text: |
+      i am fine and you
+  - text: |
+      i am good and you
+  - text: |
+      i am good, what about you
+  - text: |
+      are you alright
+  - text: |
+      are you having a good day
+  - text: |
+      cool and you
+  - text: |
+      fine and you
+  - text: |
+      hope you re having a pleasant eve
+  - text: |
+      hope your day is going well
+  - text: |
+      how about you
+  - text: |
+      how are the things going
+  - text: |
+      good how are you
+  - text: |
+      cool and how are you doing
+  - text: |
+      how are you doing this morning
+  - text: |
+      how are you feeling
+  - text: |
+      how are you getting on
+  - text: |
+      how are you going
+  - text: |
+      how are you today
+  - text: |
+      how do you do
+  - text: |
+      how do you feel
+  - text: |
+      how has your day been
+  - text: |
+      how has your day been going
+  - text: |
+      how have you been
+  - text: |
+      how is it
+  - text: |
+      how is it going
+  - text: |
+      how is your day
+  - text: |
+      how is your day being
+  - text: |
+      how is your day going
+  - text: |
+      how is your day going on
+  - text: |
+      great and how is your evening
+  - text: |
+      cool how is your life
+  - text: |
+      how is your morning going
+  - text: |
+      how is your morning so far
+    metadata:
+      canonical: true
+  - text: |
+      how was your day
+  - text: |
+      how your day is going
+  - text: |
+      how's life
+  - text: |
+      how's your day
+  - text: |
+      how's your day going
+  - text: |
+      is everything all right
+  - text: |
+      is everything okay
+  - text: |
+      what about your day
+  - text: |
+      what was your day like
+- intent: chitchat.i_am_angry
+  metadata:
+    language: en
+  examples:
+  - text: |
+      I am angry with you
+  - text: |
+      I am mad
+  - text: |
+      I am mad at you
+  - text: |
+      I am super upset with you
+  - text: |
+      I'm angry
+  - text: |
+      I'm being mad
+    metadata:
+      canonical: true
+  - text: |
+      I'm enraged
+  - text: |
+      I'm furious
+  - text: |
+      i am upset
+  - text: |
+      you are making me furious
+  - text: |
+      you are playing with my nerves
+- intent: chitchat.i_am_excited
+  metadata:
+    language: en
+  examples:
+  - text: |
+      I am excited
+    metadata:
+      canonical: true
+  - text: |
+      I'm excited about working with you
+  - text: |
+      I'm excited to start our friendship
+  - text: |
+      I'm really excited
+  - text: |
+      I'm thrilled
+  - text: |
+      how excited I am
+- intent: chitchat.i_am_good
+  metadata:
+    language: en
+  examples:
+  - text: |
+      I am good
+    metadata:
+      canonical: true
+  - text: |
+      I'm doing fine
+  - text: |
+      I'm doing good
+  - text: |
+      I'm doing just great
+  - text: |
+      I'm good
+  - text: |
+      I'm great thanks
+  - text: |
+      I'm ok
+  - text: |
+      I am good
+  - text: |
+      i am ok
+  - text: |
+      i am fine
+- intent: chitchat.i_am_happy
+  metadata:
+    language: en
+  examples:
+  - text: |
+      I am happy
+    metadata:
+      canonical: true
+  - text: |
+      I'm happy for you
+  - text: |
+      I'm happy to help
+  - text: |
+      I'm happy to see you
+  - text: |
+      happy
+  - text: |
+      if you're happy then I'm happy
+- intent: chitchat.i_am_joking
+  metadata:
+    language: en
+  examples:
+  - text: |
+      I am joking
+    metadata:
+      canonical: true
+  - text: |
+      I was just joking
+  - text: |
+      I'm just being funny
+  - text: |
+      I'm just playing with you
+  - text: |
+      I'm kidding
+  - text: |
+      it was a joke
+  - text: |
+      it's a joke
+  - text: |
+      joking
+  - text: |
+      just kidding
+  - text: |
+      kidding
+- intent: chitchat.i_am_sad
+  metadata:
+    language: en
+  examples:
+  - text: |
+      I am depressed
+  - text: |
+      I am feeling sad
+  - text: |
+      I am sad
+    metadata:
+      canonical: true
+  - text: |
+      I am upset
+  - text: |
+      I want to cry
+  - text: |
+      I'm grieving
+  - text: |
+      I'm having a bad day
+  - text: |
+      I'm not happy
+  - text: |
+      I'm unhappy
+- intent: chitchat.i_need_help
+  metadata:
+    language: en
+  examples:
+  - text: |
+      human agent
+  - text: |
+      faq
+  - text: |
+      frequently asked questions
+  - text: |
+      i need help from human agent
+  - text: |
+      call human help
+  - text: |
+      get human agent
+  - text: |
+      get human assistance
+  - text: |
+      get a real agent
+  - text: |
+      i need a real human
+  - text: |
+      help
+  - text: |
+      I need a hand
+  - text: |
+      I need help
+  - text: |
+      I need some help
+  - text: |
+      I need you
+  - text: |
+      I need you right now
+  - text: |
+      I need you to do something for me
+  - text: |
+      I need a human to help me
+  - text: |
+      I need an human help
+  - text: |
+      I want a agent
+  - text: |
+      assist
+  - text: |
+      call assistance
+  - text: |
+      assistance
+  - text: |
+      get assistance
+  - text: |
+      can help me
+  - text: |
+      can u help me
+  - text: |
+      can you assist me
+  - text: |
+      can you do something for me
+  - text: |
+      can you help
+  - text: |
+      can you help me
+  - text: |
+      can you help me now
+  - text: |
+      can you help me out
+  - text: |
+      can you help me with something
+  - text: |
+      can you help me with that
+  - text: |
+      can you help us
+  - text: |
+      could you give me a hand
+  - text: |
+      do me a favor
+  - text: |
+      do you help me
+  - text: |
+      do you want to help me
+  - text: |
+      help
+  - text: |
+      help me
+  - text: |
+      help me with a problem
+  - text: |
+      need help
+  - text: |
+      need your help
+  - text: |
+      please help me
+  - text: |
+      sos
+  - text: |
+      will you help me
+  - text: |
+      would you help me
+  - text: |
+      you can help me
+  - text: |
+      you help me
+  - text: |
+      menu
+  - text: |
+      what can I do here
+  - text: |
+      what are you useful for
+  - text: |
+      why use this bot
+  - text: |
+      why use this assistant
+- intent: chitchat.thank_you
+  metadata:
+    language: en
+  examples:
+  - text: |
+      I appreciate it
+  - text: |
+      I thank you
+  - text: |
+      all thank you
+  - text: |
+      alright thank you
+  - text: |
+      alright thanks
+  - text: |
+      appreciate your help
+  - text: |
+      cheers
+  - text: |
+      good thanks
+  - text: |
+      great thank you
+  - text: |
+      nice thank you
+  - text: |
+      no thank you that's all
+  - text: |
+      perfect thank you
+  - text: |
+      so nice of you
+  - text: |
+      terrific thank you
+  - text: |
+      thank you
+  - text: |
+      thank you again
+  - text: |
+      thank you for your help
+  - text: |
+      thank you my friend
+  - text: |
+      thank you so much
+  - text: |
+      thank you that will be all
+  - text: |
+      thanks
+  - text: |
+      thanks a lot
+  - text: |
+      thanks again
+  - text: |
+      thanks buddy
+  - text: |
+      thanks for your help
+  - text: |
+      thanks love
+  - text: |
+      thanks so much
+  - text: |
+      thanx
+  - text: |
+      thnx
+  - text: |
+      very good thank you
+  - text: |
+      well thank you
+  - text: |
+      well thanks
+  - text: |
+      you helped a lot thank you
+    metadata:
+      canonical: true
+- intent: show_my_bookings
+  metadata:
+    language: en
+  examples:
+  - text: |
+      show my bookings
+  - text: |
+      show my booked flights
+  - text: |
+      show my flights
+  - text: |
+      what are my bookings
+  - text: |
+      what are my booked flights
+  - text: |
+      what are my booked flights
+  - text: |
+      my bookings
+  - text: |
+      my booked flights
+  - text: |
+      booked flights
+  - text: |
+      my flights
+- intent: search_flights
+  metadata:
+    language: en
+  examples:
+  - text: |
+      display flights
+  - text: |
+      i would like to search for flights
+  - text: |
+      i want to travel
+  - text: |
+      search for flights
+  - text: |
+      i am looking for flights
+  - text: |
+      show me flights
+  - text: |
+      show me flights
+  - text: |
+      show flights
+- intent: book_flight
+  metadata:
+    language: en
+  examples:
+  - text: |
+      flight book
+  - text: |
+      book flight
+  - text: |
+      book flights
+  - text: |
+      bookings
+  - text: |
+      book a flight
+  - text: |
+      I want to book a flight
+- intent: search_flight_all_story
+  metadata:
+    language: en
+  examples:
+  - text: |
+      search flights from [madrid](search_from_story) to [barcelona](search_to_story) with budget [123](budget_story)
+  - text: |
+      flights from [italy](search_from_story) to [aveiro](search_to_story) my budget [6000](budget_story)
+  - text: |
+      show flights from [porto](search_from_story) to [lisboa](search_to_story) maximum price [10](budget_story)
+  - text: |
+      i would like to search for flights from [Kyiv](search_from_story) to [moscow](search_to_story) under [300](budget_story)
+  - text: |
+      i am looking flights from [paris](search_from_story) to [brazil](search_to_story) costing [90](budget_story)
+  - text: |
+      display flights from [aveiro](search_from_story) to [porto](search_to_story) with budget [123](budget_story)
+  - text: |
+      show me flights from [poland](search_from_story) to [lisbon](search_to_story) with budget [123](budget_story)
+  - text: |
+      show me flights from [aveiro](search_from_story) to [lisbon](search_to_story) with budget [123](budget_story)
+  - text: |
+      show me flights from [aveiro](search_from_story) to [lisbon](search_to_story) under [123](budget_story)
